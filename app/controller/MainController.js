@@ -26,13 +26,30 @@ Ext.define('MyApp.controller.MainController', {
         // Main navigation view
         var mainView = this.getMainView();
 		
-		//console.log(contactsList);
-        // Navigate to details
+		var featureName = record.data.viewName;
+		var viewName = '';
+		
+		switch (featureName)
+		{
+		case 'CameraView':
+		  viewName = 'cameraView';
+		  break;
+		case 'ContactsView':
+	 	   viewName = 'contactsList';
+	  	 break;
+		case 'VibratorView':
+ 	   	 viewName = 'vibratorView';
+		 break;
+		case 'CapabilitiesView':
+   			viewName = 'CapabilitiesView';
+		 break;
+		 
+		default:
+		  //do nothing
+		}
+
         mainView.push({
-            xtype: 'contactsList'
-           // data: record.data
-		   
-	//	  
+            xtype: viewName
         });
 
     }
