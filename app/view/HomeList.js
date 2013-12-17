@@ -20,7 +20,7 @@ Ext.define('MyApp.view.HomeList', {
 		title:'Main View',
         itemId: 'list',
         emptyText: 'No Matching Items',
-        store: 'People',
+        store: 'Features',
         itemTpl: [
             '<div>{title}</div>'
         ]

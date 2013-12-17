@@ -18,7 +18,8 @@ Ext.define('MyApp.view.MainView', {
     alias: 'widget.mainview',
 
     requires: [
-        'MyApp.view.HomeList'
+        'MyApp.view.HomeList',
+		'MyApp.view.ContactsList'
     ],
 
     config: {

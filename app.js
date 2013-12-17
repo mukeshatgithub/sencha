@@ -17,29 +17,34 @@
 Ext.Loader.setConfig({
 
 });
+//document.addEventListener("deviceready", onDeviceReady, false);
+
+
 
 
 Ext.application({
     models: [
-        'Person'
+        'Main',
+		'Contacts'
     ],
     stores: [
-        'People'
+        'Features',
+		'Contacts'
     ],
     views: [
-		'CameraView',
-        'MainView',
-        'DetailPanel',
-        'HomeList'
+		'MainView',
+        'HomeList',
+        'ContactsList'
     ],
     controllers: [
-        'People'
+        'MainController',
+		'Contacts'
     ],
     name: 'MyApp',
+	
 
     launch: function() {
-
-        Ext.create('MyApp.view.MainView', {fullscreen: true});
+		Ext.create('MyApp.view.MainView', {fullscreen: true});
     }
 
 });
